@@ -74,3 +74,42 @@ body {
     width: 25%;
     font-size: large;
 }
+
+.players-selected{
+    background-color: rgb(75, 172, 241);
+}
+
+.player-initials{
+    width: 100%;
+    margin: auto;
+}
+
+.middle{
+    border-radius: 1em;
+    border: none;
+    padding: 0.5em;
+    margin: 0.25em;
+    margin-left: 25%;
+    text-align: center;
+    width: 50%;
+}
+
+.auto{
+    margin: auto;
+}
+
+.confirm{
+    margin: auto;
+    width: 100%;
+}
+
+.confirm-button{
+    background-color: rgb(75, 172, 241);
+    border-radius: 1em;
+    height: 2em;
+    font-size: 1em;
+    margin: auto;
+    border: none;
+    width: 40%;
+    margin-left: 30%;
+}
