@@ -9,7 +9,6 @@ body{
 }
 
 .new-game{
-    width: 80%;
     background-color: grey;
     margin: auto;
     border-radius: 1em;
@@ -34,6 +33,7 @@ body {
     width: 100%;
     margin-bottom: 10px;
     box-sizing: border-box;
+    font-size: 1em;
 }
 
 #result-list {
@@ -73,6 +73,8 @@ body {
 .players{
     width: 25%;
     font-size: large;
+    border-radius: 0;
+    color: black;
 }
 
 .players-selected{
@@ -117,3 +119,4 @@ body {
 .hide{
     opacity: 0;
 }
+
