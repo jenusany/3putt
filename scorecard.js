@@ -8,7 +8,7 @@ playerList.forEach((player, index) => {
 
     let totalSum = document.createElement('div');
     totalSum.className = 'sums';
-    totalSum.innerText = 0;
+    totalSum.innerText = (localStorage.getItem(`total-${index}`) || 0);
     document.getElementById('totals').append(totalSum);
 
     const playerDiv = document.createElement('div');
@@ -20,11 +20,11 @@ playerList.forEach((player, index) => {
         const input = document.createElement('input');
         input.type = 'number';
         input.className = 'score';
-        //input.value = 1;
+        input.value = (localStorage.getItem(`score-${index + 1}-${i}`) || "");
         input.id = `score-${index + 1}-${i}`;
         playerDiv.appendChild(input);
         input.addEventListener('input', (num) => {
-            //totalSum.innerText = Number(totalSum.innerText) + Number(num.data);
+            localStorage.setItem(`score-${index + 1}-${i}`, num.data)
             updateTotal(totalSum,index);
         });
     }
@@ -37,6 +37,6 @@ function updateTotal(total, index){
     for(let i = 1; i <= 18; i++){
         sum += Number(document.getElementById(`score-${index + 1}-${i}`).value);
     }
-    total.innerText = '';
     total.innerText = sum;
+    localStorage.setItem(`total-${index}`, sum);
 }
