@@ -178,13 +178,20 @@ h1{
 }
 
 .totals{
-    position: fixed;
+    position: relative;
     bottom: 1%;
     width: 75%;
     background-color: grey;
     font-size: 2em;
     display: flex;
     margin-left: -1%;
+}
+
+.total-box{
+    position: fixed;
+    bottom: 1%;
+    width: 100%;
+    display: flex;
 }
 
 .sums{
@@ -201,4 +208,24 @@ h1{
 .course-header{
     color: rgb(75, 172, 241);
     padding-top: 0.5em;
+}
+
+.total-par{
+    width: 100%;
+    font-size: 2em;
+    background-color: grey;
+    color: white;
+    text-align: right;
+    right: 10px;
+}
+
+.course-total{
+    position: relative;
+    margin: auto;
+    width: 20%;
+    font-size: 2em;
+    background-color: rgb(230, 230 , 230);
+    color: black;
+    text-align: center;
+    right: 10px;
 }

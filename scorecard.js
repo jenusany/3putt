@@ -55,6 +55,7 @@ document.getElementById('course-header').innerText = localStorage.getItem('cours
 let parString = localStorage.getItem('pars');
 
 const parBox = document.getElementById('par');
+let totalPar = 0;
 
 for(let i = 0; i < parString.length; i++){
     const innerHTML =`
@@ -62,8 +63,11 @@ for(let i = 0; i < parString.length; i++){
                 ${parString[i]}
             </div>
     `
+    totalPar += Number(parString[i]);
     parBox.insertAdjacentHTML('beforeend', innerHTML);
 }
+
+document.getElementById('course-total').innerText = totalPar;
 
 
 const header = document.getElementById('player-header');
