@@ -93,6 +93,7 @@ h1{
     margin-left: 25%;
     text-align: center;
     width: 50%;
+    font-size: 1em;
 }
 
 .auto{
@@ -195,4 +196,9 @@ h1{
     display: grid;
     margin: auto;
     width: 100%;
+}
+
+.course-header{
+    color: rgb(75, 172, 241);
+    padding-top: 0.5em;
 }
