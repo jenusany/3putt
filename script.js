@@ -81,8 +81,7 @@ players.forEach((event) => {
         players.forEach((event) => {
             event.classList = 'players';
         });
-        event.classList += ' players-selected';
-        localStorage.setItem("players", Number(event.innerText));
+        event.className = 'players-selected';
 
         document.getElementById('player-initials').innerHTML = ``;
 
@@ -110,17 +109,19 @@ function confirm(){
         let initials = document.querySelectorAll('.initial-input');
         let i = 1;
         let filled = true;
+        let list = [];
         initials.forEach((initial) => {
             if(!course){
                 filled = false;
             }
             if(initial.value.length === 2){
-                localStorage.setItem(`player${i}`, initial.value);
+                list.push(initial.value);
             }else{
                 filled = false;
             }
         })
         if(filled){
+            localStorage.setItem('playerList', list);
             window.location.href = 'scorecard.html';
         }else{
             alert("Fill in all Fields!")
