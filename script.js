@@ -25,12 +25,40 @@ players.forEach((event) => {
         document.getElementById('player-initials').innerHTML = ``;
 
         for(let i = 1; i <= Number(event.innerText); i++){
-            document.getElementById('player-initials').insertAdjacentHTML('beforeend', `<input type="text" maxlength="2" class="middle" placeholder="Player ${i} initials" required>`)
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.maxLength = '2';
+            input.className = 'initial-input';
+            input.placeholder = `Player ${i} initials`;
+            input.required = 'required';
+            document.getElementById('player-initials').append(input);
         }
         confirm()
     })
 })
 
 function confirm(){
-    document.getElementById('confirm').innerHTML = `<button class="confirm-button">CONFIRM</button>`;
+    document.getElementById('confirm').innerHTML = '';
+    const button = document.createElement('button');
+    button.className = 'confirm-button';
+    button.textContent = 'CONFIRM';
+    button.id = 'confirm-button';
+    document.getElementById('confirm').append(button);
+    button.addEventListener('click', () => {
+        let initials = document.querySelectorAll('.initial-input');
+        let i = 1;
+        let filled = true;
+        initials.forEach((initial) => {
+            if(initial.value.length === 2){
+                localStorage.setItem(`player${i}`, initial.value);
+            }else{
+                alert("Player Initals Must Be Filled");
+                filled = false;
+            }
+        })
+        if(filled){
+            window.location.href = 'scorecard.html';
+        }
+    })
+    //document.getElementById('confirm').innerHTML = `<button id='confirm-button' class="confirm-button">CONFIRM</button>`;
 }
