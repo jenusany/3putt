@@ -108,6 +108,9 @@ playerList.forEach((player, index) => {
     const playerDiv = document.createElement('div');
     playerDiv.className = 'col';
     playerDiv.id = `col-${index + 1}`;
+    if (window.innerWidth > 600){
+        playerDiv.style.paddingTop = '30px';
+    }
     
     const name = document.createElement('h1');
     name.style.fontSize = '2em';
@@ -120,7 +123,9 @@ playerList.forEach((player, index) => {
         input.className = 'score';
         input.value = (localStorage.getItem(`score-${index + 1}-${i}`) || "");
         input.id = `score-${index + 1}-${i}`;
-        //input.placeholder = i;
+        if (window.innerWidth > 600){
+            input.style.height = '62px';
+        }
         playerDiv.appendChild(input);
         input.addEventListener('input', (num) => {
             localStorage.setItem(`score-${index + 1}-${i}`, num.data)
