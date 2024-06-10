@@ -77,13 +77,14 @@ parBox.append(par);
 
 let totalPar = 0;
 
-for(let i = 0; i < parString.length; i++){
+for(let i = 1; i <= parString.length; i++){
     const innerHTML =`
     <div class="par-boxes">
-                ${parString[i]}
+    <p class="hole"> (${i})</p>
+                ${parString[i-1]}
             </div>
     `
-    totalPar += Number(parString[i]);
+    totalPar += Number(parString[i-1]);
     parBox.insertAdjacentHTML('beforeend', innerHTML);
 }   
 

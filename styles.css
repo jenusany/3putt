@@ -245,3 +245,9 @@ h1{
     right: 10px;
     margin-left: 5.5%;
 }
+
+.hole {
+    font-size: 0.4em;
+    position: absolute;
+    transform: translateY(30px); /* Move the element down by 10 pixels */
+}
