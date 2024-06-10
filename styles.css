@@ -135,18 +135,19 @@ h1{
     margin: auto;
     padding-bottom: 1%;
     border: 1px solid white;
+    border-radius: 0.5em;
 }
 
 
 .par{
-    color: rgb(220, 220, 220);
+    color: rgb(75, 172, 241);
     font-size: 40px;
     text-align: center;
-    background-color: grey;
     margin: 1px;
     margin-right: 0;
     margin-left: 1%;
     width: 25%;
+    margin-top: 2%;
 }
 
 .par-boxes{
@@ -154,7 +155,7 @@ h1{
     color: black;
     width: 150px;
     max-width: 90%;
-    height: 50px;
+    height: 61px;
     margin: auto;
     padding-bottom: 5px;
     border: 1px solid grey;
@@ -181,7 +182,7 @@ h1{
 .totals{
     position: relative;
     bottom: 1%;
-    width: 75%;
+    width: 72%;
     background-color: grey;
     font-size: 2em;
     display: flex;
