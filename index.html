@@ -42,5 +42,19 @@
         <br>
     </div>
     <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            // Check if the page has already been refreshed
+            if (!localStorage.getItem('refreshedIndex')) {
+                // Set flag indicating that the page has been refreshed
+                localStorage.setItem('refreshedIndex', true);
+
+                location.reload();
+            } else {
+                // Clear the flag to allow future refreshes
+                localStorage.removeItem('refreshedIndex');
+            }
+        }
+    </script>
 </body>
 </html>
