@@ -52,7 +52,17 @@ fetchCSV(filePath);
 
 document.getElementById('course-header').innerText = localStorage.getItem('course');
 
-let parString = localStorage.getItem('pars');
+let parString;
+
+try {
+    parString = localStorage.getItem('pars').trim();
+} catch (error) {
+    location.reload();
+}
+
+if(!parString){
+    location.reload();
+}
 
 
 
@@ -66,19 +76,16 @@ parBox.append(par);
 
 let totalPar = 0;
 
-try {
-    for(let i = 0; i < parString.length; i++){
-        const innerHTML =`
-        <div class="par-boxes">
-                    ${parString[i]}
-                </div>
-        `
-        totalPar += Number(parString[i]);
-        parBox.insertAdjacentHTML('beforeend', innerHTML);
-    }   
-} catch (error) {
-    location.reload();
-}
+for(let i = 0; i < parString.length; i++){
+    const innerHTML =`
+    <div class="par-boxes">
+                ${parString[i]}
+            </div>
+    `
+    totalPar += Number(parString[i]);
+    parBox.insertAdjacentHTML('beforeend', innerHTML);
+}   
+
 
 document.getElementById('course-total').innerText = totalPar;
 
@@ -105,7 +112,7 @@ playerList.forEach((player, index) => {
     name.innerText = player.toUpperCase();
     playerDiv.append(name);
 
-    for (let i = 0; i <= parString.length; i++) {
+    for (let i = 1; i <= parString.length; i++) {
         const input = document.createElement('input');
         input.type = 'number';
         input.className = 'score';
@@ -123,7 +130,7 @@ playerList.forEach((player, index) => {
 
 function updateTotal(total, index){
     let sum = 0;
-    for(let i = 0; i <= parString.length; i++){
+    for(let i = 1; i <= parString.length; i++){
         sum += Number(document.getElementById(`score-${index + 1}-${i}`).value);
     }
     total.innerText = sum;
