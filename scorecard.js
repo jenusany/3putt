@@ -71,6 +71,7 @@ const parBox = document.getElementById('par');
 const par = document.createElement('h1');
 par.style.fontSize = '0.75em';
 par.innerText = 'PAR';
+par.style.textShadow = '-2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff,2px 2px 0 #fff';
 parBox.append(par);
 
 
