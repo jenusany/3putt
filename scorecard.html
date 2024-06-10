@@ -33,23 +33,7 @@
     <br>
     <br>
     <br>
-
-    
     <script src="scorecard.js"></script>
-    <script>
-        window.onload = function() {
-            // Check if the page has already been refreshed
-            if (!localStorage.getItem('refreshed')) {
-                // Set flag indicating that the page has been refreshed
-                localStorage.setItem('refreshed', true);
-
-                location.reload();
-            } else {
-                // Clear the flag to allow future refreshes
-                localStorage.removeItem('refreshed');
-            }
-        }
-    </script>
     
 </body>
 </html>

@@ -1,5 +1,3 @@
-localStorage.clear();
-
 const courses = document.getElementById('result-list');
 
 let course = '';
@@ -25,7 +23,6 @@ function readCSV(file) {
                             item.style.display = 'none';
                         });
                         document.getElementById('search-input').value = this.textContent;
-                        localStorage.setItem('course', this.textContent);
                         course = this.textContent;
                     });
                 }
@@ -122,7 +119,9 @@ function confirm(){
             }
         })
         if(filled){
+            localStorage.clear();
             localStorage.setItem('playerList', list);
+            localStorage.setItem('course', course);
             window.location.href = 'scorecard.html';
         }else{
             alert("Fill in all Fields!")

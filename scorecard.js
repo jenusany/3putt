@@ -54,17 +54,23 @@ document.getElementById('course-header').innerText = localStorage.getItem('cours
 
 let parString = localStorage.getItem('pars');
 
+
+
 const parBox = document.getElementById('par');
 let totalPar = 0;
 
-for(let i = 0; i < parString.length; i++){
-    const innerHTML =`
-    <div class="par-boxes">
-                ${parString[i]}
-            </div>
-    `
-    totalPar += Number(parString[i]);
-    parBox.insertAdjacentHTML('beforeend', innerHTML);
+try {
+    for(let i = 0; i < parString.length; i++){
+        const innerHTML =`
+        <div class="par-boxes">
+                    ${parString[i]}
+                </div>
+        `
+        totalPar += Number(parString[i]);
+        parBox.insertAdjacentHTML('beforeend', innerHTML);
+    }   
+} catch (error) {
+    location.reload();
 }
 
 document.getElementById('course-total').innerText = totalPar;
