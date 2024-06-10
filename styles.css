@@ -79,7 +79,7 @@ h1{
     width: 25%;
     font-size: large;
     color: black;
-    background-color: rgb(75, 172, 241);
+    background-color: rgb(101, 175, 102);
 }
 
 .player-initials{
@@ -108,7 +108,7 @@ h1{
 }
 
 .confirm-button{
-    background-color: rgb(75, 172, 241);
+    background-color: rgb(101, 175, 102);
     border-radius: 1em;
     height: 2em;
     font-size: 1em;
@@ -141,7 +141,7 @@ h1{
 
 
 .par{
-    color: rgb(75, 172, 241);
+    color: rgb(61, 106, 62);
     font-size: 40px;
     text-align: center;
     margin: 1px;
