@@ -71,7 +71,7 @@ const parBox = document.getElementById('par');
 const par = document.createElement('h1');
 par.style.fontSize = '0.75em';
 par.innerText = 'PAR';
-par.style.color = 'white';
+par.style.color = 'rgb(230, 230 , 230)';
 parBox.append(par);
 
 
@@ -115,6 +115,7 @@ playerList.forEach((player, index) => {
     const name = document.createElement('h1');
     name.style.fontSize = '2em';
     name.innerText = player.toUpperCase();
+    name.style.color = 'rgb(230, 230 , 230)';
     playerDiv.append(name);
 
     for (let i = 1; i <= parString.length; i++) {

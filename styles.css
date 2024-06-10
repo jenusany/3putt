@@ -180,7 +180,7 @@ h3{
     margin: auto;
     height: 50px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(230,230,230);
 }
 
 .name{
@@ -216,7 +216,7 @@ h3{
 }
 
 .course-header{
-    color: white;
+    color: rgb(230,230,230);
     padding-top: 0.5em;
 }
 
