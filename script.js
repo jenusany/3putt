@@ -100,7 +100,7 @@ function confirm(){
     document.getElementById('confirm').innerHTML = '';
     const button = document.createElement('button');
     button.className = 'confirm-button';
-    button.textContent = 'CONFIRM';
+    button.textContent = 'PLAY';
     button.id = 'confirm-button';
     document.getElementById('confirm').append(button);
     button.addEventListener('click', () => {
