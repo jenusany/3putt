@@ -10,11 +10,10 @@ function readCSV(file) {
                 const words = line.split(',');
                 if (words.length > 0) {
                     if(words[0] === localStorage.getItem('course')){
-                        words.forEach((num) => {
-                            if(num.length === 1 && num !== ','){
-                                pars += (num);
-                            }
-                        })
+                        console.log(words);
+                        for(let i = 1; i < words.length; i++){
+                            pars += words[i];
+                        }
                     }
                 }
             });
@@ -59,6 +58,7 @@ try {
 } catch (error) {
     location.reload();
 }
+console.log(parString)
 
 if(!parString){
     location.reload();
@@ -118,6 +118,7 @@ playerList.forEach((player, index) => {
         input.className = 'score';
         input.value = (localStorage.getItem(`score-${index + 1}-${i}`) || "");
         input.id = `score-${index + 1}-${i}`;
+        //input.placeholder = i;
         playerDiv.appendChild(input);
         input.addEventListener('input', (num) => {
             localStorage.setItem(`score-${index + 1}-${i}`, num.data)
@@ -130,7 +131,8 @@ playerList.forEach((player, index) => {
 
 function updateTotal(total, index){
     let sum = 0;
-    for(let i = 1; i <= parString.length; i++){
+    // DO NOT CHANGE
+    for(let i = 1; i < parString.length; i++){
         sum += Number(document.getElementById(`score-${index + 1}-${i}`).value);
     }
     total.innerText = sum;
