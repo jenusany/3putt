@@ -1,3 +1,9 @@
+if (window.innerWidth > 600){
+    document.getElementById('new-game').style.width = '50%';
+}else{
+    document.getElementById('new-game').style.width = '100%';
+}
+
 const courses = document.getElementById('result-list');
 
 let course = '';

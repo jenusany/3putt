@@ -21,6 +21,10 @@ h1{
     opacity: 200;
 }
 
+h3{
+    text-align: center;
+}
+
 .search-container {
     width: 75%;
     margin: auto;
@@ -137,6 +141,7 @@ h1{
     margin: auto;
     padding-bottom: 1%;
     border-radius: 0.5em;
+    width: 100%;
 }
 
 
