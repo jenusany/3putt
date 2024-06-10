@@ -57,6 +57,13 @@ let parString = localStorage.getItem('pars');
 
 
 const parBox = document.getElementById('par');
+
+const par = document.createElement('h1');
+par.style.fontSize = '0.75em';
+par.innerText = 'PAR';
+parBox.append(par);
+
+
 let totalPar = 0;
 
 try {
@@ -92,7 +99,11 @@ playerList.forEach((player, index) => {
     const playerDiv = document.createElement('div');
     playerDiv.className = 'col';
     playerDiv.id = `col-${index + 1}`;
-    playerDiv.innerText = player.toUpperCase();
+    
+    const name = document.createElement('h1');
+    name.style.fontSize = '2em';
+    name.innerText = player.toUpperCase();
+    playerDiv.append(name);
 
     for (let i = 1; i <= parString.length; i++) {
         const input = document.createElement('input');
