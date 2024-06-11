@@ -140,7 +140,7 @@ playerList.forEach((player, index) => {
 function updateTotal(total, index){
     let sum = 0;
     // DO NOT CHANGE
-    for(let i = 1; i < parString.length; i++){
+    for(let i = 1; i <= parString.length; i++){
         sum += Number(document.getElementById(`score-${index + 1}-${i}`).value);
     }
     total.innerText = sum;
