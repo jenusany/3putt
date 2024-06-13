@@ -89,7 +89,7 @@ players.forEach((event) => {
 
         document.getElementById('player-initials').innerHTML = ``;
 
-        for(let i = 1; i <= Number(event.innerText); i++){
+        for(let i = 1; i <= Number(event.innerText) + 4; i++){
             const input = document.createElement('input');
             input.type = 'text';
             input.maxLength = '2';
