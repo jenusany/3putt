@@ -146,3 +146,4 @@ function updateTotal(total, index){
     total.innerText = sum;
     localStorage.setItem(`total-${index}`, sum);
 }
+//
